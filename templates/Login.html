@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                input {
+                    margin-bottom: 10px;
+                    padding: 8px 50px;
+
+                }
+                body{
+                    padding-top: 100px;
+                    font-size: 20px;
+                    padding-left: 100px;
+                }
+                input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 14px;
+                    margin: 5px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                }
+            </style>
+            <title>login </title>
+        </head>
+        <body style="text-align:center;">
+
+            <form method= "POST"   action = "/login" >
+
+
+                <h1 class="font">Login</h1>
+                {% if error %}
+                    <p style="color: brown;"><strong>Error</strong>: {{error}}</p>
+                {% endif %}
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required="required" ><br>
+                <label for="password">Password:</label >
+                <input type="password" id="pwd" name="pwd" placeholder="Enter Password" required="required"><br>
+                <input type="submit" value="LOGIN"  name="submit" class="login"/>
+
+
+                <p>Don't have an account <a href="/signup" style="color:dodgerblue">Sing up</a>.
+
+            </form>
+
+
+        </body>
+        </html>
+
