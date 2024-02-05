@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>User Account</title>
+
+    </head>
+    <body>
+        {% if msg %}
+            <p style="color: green;"> {{msg}}</p>
+        {% endif %}
+
+        {% for item in data %}
+        <tr>
+
+            <td><strong>Welcome:</strong>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
+            <br>
+            <td><strong>Email:</strong>{{item[4]}}</td>
+            <td><strong>username:</strong>{{item[0]}}</td>
+
+
+        </tr>
+        {% endfor %}
+        <hr>
+        <br>
+
+        <br>
+        <form method= ""   action="/logout">
+
+            <label for="file">Select a file:</label>
+            <input type="file" id="file" name="file">
+
+            <input type="submit" value="logout"  name="submit" class="logout"/>
+
+        </form>
+    </body>
+</html>
